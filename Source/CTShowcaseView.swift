@@ -100,7 +100,7 @@ open class CTShowcaseView: UIView {
         messageLabel.text = message
         addSubview(messageLabel)
         
-        NotificationCenter.default.addObserver(self, selector: #selector(CTShowcaseView.enteredForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(CTShowcaseView.enteredForeground), name: NSNotification.Name.UIApplicationWillEnterForeground, object: nil)
     }
     
     required public init?(coder aDecoder: NSCoder) {
